@@ -29,6 +29,10 @@
       "heading": "### AM/PM switch in title",
       "desc": "You can move AM/PM switch to picker's title."
     },
+    "elevation": {
+      "heading": "### Picker's elevation",
+      "desc": "Emphasize the `v-time-picker` component by providing an **elevation** from 0 to 24. Elevation modifies the `box-shadow` css property."
+    },
     "no-title": {
       "heading": "### No title",
       "desc": "You can remove picker's title."
@@ -61,6 +65,7 @@
       "allowedMinutes": "Restricts which minutes can be selected",
       "allowedSeconds": "Restricts which seconds can be selected",
       "disabled": "disables picker",
+      "flat": "Removes  elevation",
       "scrollable": "Allows changing hour/minute with mouse scroll",
       "min": "Minimum allowed time",
       "max": "Maximum allowed time",
@@ -75,6 +80,10 @@
     "click:hour": "Emitted when user selects the hour",
     "click:minute": "Emitted when user selects the minute",
     "click:second": "Emitted when user selects the second",
-    "change": "Emitted when the time selection is done (when user changes the minute for HH:MM picker and the second for HH:MM:SS picker"
+    "change": "Emitted when the time selection is done (when user changes the minute for HH:MM picker and the second for HH:MM:SS picker",
+    "update:period": "Emitted when user clicks the AM/PM button"
+  },
+  "slots": {
+    "default": "Displayed below the clock, can be used for example for adding action button (`OK` and `Cancel`)"
   }
 }

@@ -8,17 +8,17 @@
           :close-on-content-click="false"
           transition="scale-transition"
           offset-y
-          full-width
           max-width="290px"
           min-width="290px"
         >
-          <template v-slot:activator="{ on }">
+          <template v-slot:activator="{ on, attrs }">
             <v-text-field
               v-model="dateFormatted"
               label="Date"
               hint="MM/DD/YYYY format"
               persistent-hint
               prepend-icon="event"
+              v-bind="attrs"
               @blur="date = parseDate(dateFormatted)"
               v-on="on"
             ></v-text-field>
@@ -34,11 +34,10 @@
           :close-on-content-click="false"
           transition="scale-transition"
           offset-y
-          full-width
           max-width="290px"
           min-width="290px"
         >
-          <template v-slot:activator="{ on }">
+          <template v-slot:activator="{ on, attrs }">
             <v-text-field
               v-model="computedDateFormatted"
               label="Date (read only text field)"
@@ -46,6 +45,7 @@
               persistent-hint
               prepend-icon="event"
               readonly
+              v-bind="attrs"
               v-on="on"
             ></v-text-field>
           </template>
